@@ -1,0 +1,121 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif; /* Modern font */
+    background: linear-gradient(135deg, #f05053, #363438); /* Eye-catching gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff; /* Light text for contrast */
+    overflow: hidden; /* Prevents scrollbars for background animation */
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.15); /* Frosted glass effect */
+    backdrop-filter: blur(10px); /* Blur for the glass effect */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 380px;
+    text-align: center; /* Center content within the container */
+}
+
+.login-container h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #eee;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05); /* Transparent input background */
+    color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s, background-color 0.3s; /* Smooth transitions */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #66b3ff; /* Highlight on focus */
+    background: rgba(255, 255, 255, 0.1); /* Slightly less transparent on focus */
+    box-shadow: 0 0 5px rgba(102, 179, 255, 0.2); /* Subtle glow on focus */
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #66b3ff, #007bff); /* Gradient button */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(to right, #5299e6, #0056b3); /* Darker gradient on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25); /* More prominent shadow on hover */
+}
+
+.signup-link {
+    margin-top: 25px;
+    color: #ddd;
+    font-size: 0.9em;
+}
+
+.signup-link a {
+    color: #66b3ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: #5299e6;
+}
+
+/* Optional: Add a subtle animation to the background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(-45deg, #f05053, #363438, #f05053); /* Animated gradient */
+    background-size: 400% 100%;
+    animation: gradientShift 15s linear infinite; /* Animation speed */
+    z-index: -1; /* Place behind the content */
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
